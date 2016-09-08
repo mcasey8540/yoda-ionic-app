@@ -1,0 +1,23 @@
+<ion-view class="pane-blue">
+  <ion-nav-bar class="nav-blue primary-nav">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <button type="submit" class="button button-clear text-large" ng-disabled="signUp.$invalid" ng-click="joinTeam()">Next</button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <form name="signUp" ng-submit="joinTeam()">
+    <ion-content class="padding">
+      <div class="list list-inset text-white">
+        <h2 class="text-center">Create or Join Your Team</h2>
+        <p ng-show="team.message">{{team.message}}</p>
+        <div class="form-padding-top">
+          <label class="item item-input placeholder-white">
+            <input type="text" placeholder="Team Name" ng-model="team.teamName" required> </input>
+          </label>
+        </div>
+      </div>
+    </ion-content>
+  </form>
+  <img id="join-team-img" src="img/join-team.png">
+</ion-view>

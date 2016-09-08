@@ -1,0 +1,21 @@
+<ion-view class="pane-blue">
+  <ion-nav-bar class="nav-blue primary-nav">
+    <ion-nav-buttons side="left">
+      <button nav-direction="back" class="button-dark button-icon button-clear" ui-sref="app.sideMenu.joinTeam">Back</button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button type="submit" class="button button-clear text-large" ng-disabled="signUp.$invalid" ng-click="createAccount()">Next</button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <form name="signUp" ng-submit="createAccount()">
+    <div class="list list-inset text-white">
+      <h3 class="text-center padding-bottom">It's like a first date,<br> <span class="text-thin">What's your...?</span></h3>
+      <label class="item item-input placeholder-white">
+        <input type="text" placeholder="First Name" ng-model="account.fName" ng-keyup="signUp.$valid && $event.keyCode == 13 && createAccount()" required>
+      </label>
+      <label class="item item-input placeholder-white"> 
+        <input type="text" placeholder="Last Name" ng-model="account.lName" ng-keyup="signUp.$valid && $event.keyCode == 13 && createAccount()" required>
+      </label>
+    </div>
+  </form>
+</ion-view>
